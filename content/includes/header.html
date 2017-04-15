@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="Vets.gov" property="og:site_name">
+{% if lastupdate %}
+<meta name="DC.Date" content="{{lastupdate| date: '%Y-%m-%d'}}" property="http://purl.org/dc/terms/date">
+{% endif %}
+{% if title %}
+<meta content="{{ title }}" property="og:title">
+{% else %}
+<meta content="https://www.vets.gov" property="og:title">
+{% endif %}
+<meta content="website" property="og:type">
+{% if path %}
+<meta content="https://www.vets.gov/{{ path }}" property="og:url">
+{% endif %}
+<meta content="https://www.vets.gov/img/design/logo/og-image.jpg" property="og:image">
+{% if tags %}
+{% for tag in tags %}
+<meta content="{{ tag }}" property="article:tag">
+{% endfor %}
+{% endif %}
+{% if title === 'Home' %}
+<title>Vets.gov</title>
+{% else %}
+<title>{{ title }}: Vets.gov</title>
+{% endif %}
+
+<!-- Icons -->
+<link href="/img/design/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="/img/design/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+<link href="/img/design/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+<link href="/img/design/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+<link rel="shortcut icon" href="/img/design/icons/favicon.ico" />
+
+<meta name="msapplication-TileImage" content="/img/design/icons/apple-touch-icon-114x114">
+<meta name="msapplication-TileColor" content="#144073">
+
+<!-- CSS -->
+{% if entryname %}
+<link rel="stylesheet" href="/generated/{{ entryname }}.css">
+{% else %}
+<link rel="stylesheet" href="/generated/no-react.css">
+{% endif %}
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700|Roboto+Slab" rel="stylesheet" type="text/css">
+
+<!-- Old IE -->
+
+<!--[if lt IE 9]>
+<link rel='stylesheet' href='/assets/css/ie.css'>
+<![endif]-->
+
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=VA" id="_fed_an_ua_tag"></script>
+
+<script>
+//<![CDATA[
+window.webpackManifest = 'CHUNK_MANIFEST_PLACEHOLDER';
+//]]>
+</script>
+
+<script src="/generated/vendor.js"></script>
+{% if entryname %}
+<script src="/generated/{{ entryname }}.entry.js"></script>
+{% else %}
+<script src="/generated/no-react.entry.js"></script>
+{% endif %}
+
+</head>
+<body class="{{ body_class }}">
+
+<a class="show-on-focus" href="#content">Skip to Content</a>
+
+<header class="header">
+  <div class="incompatible-browser-warning">
+    <div class="row full">
+      <div class="small-12">
+        Your browser is out of date. To use this website, please <a href="https://whatbrowser.org/">update your browser</a> or use a different device.
+      </div>
+    </div>
+  </div>
+
+  <div class="crisis-line-sm">
+    <div class="va-flex">
+      <button data-show="#modal-crisisline" class="va-crisis-line va-overlay-trigger">
+        <span class="va-flex">
+          <span class="vcl"></span>
+          Get help from Veterans Crisis Line
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="va-notice--banner">
+    <div class="va-notice--banner-inner">
+      <div class="va-wip--wide">
+        <p>This site is a <a target="_blank" href="https://www.vets.gov/playbook/design/">work in progress.</a> If you don&rsquo;t find what you need, visit <a target="_blank" href="http://www.va.gov">VA.gov</a>.</p>
+      </div>
+      <div class="crisis-line-container--wide">
+        <button class="va-crisis-line">
+          <span class="va-flex">
+            <span class="vcl"></span>
+            <b>Get help from Veterans Crisis Line</b>
+          </span>
+        </button>
+        <div class="va-util-rel"> <!-- VA Panel no touch screens -->
+          <div class="va-crisis-panel va-crisis-panel--notouch">
+            <div  class="va-crisis-panel-body">
+              <ul>
+                <li>Call <strong>1-800-273-8255 (Press 1)</strong></li>
+                <li>Text to <b>838255</b></li>
+                <li><a href="https://www.veteranscrisisline.net/ChatTermsOfService.aspx?account=Veterans%20Chat">Chat confidentially now</a></li>
+              </ul>
+              <p>If you are in crisis or having thoughts of suicide,
+        visit <a href="https://www.veteranscrisisline.net/">VeteransCrisisLine.net</a> for more resources.</p>
+            </div>
+          </div>
+         <!--END VA Panel no touch screens -->
+         </div>
+      </div>
+    </div>
+  </div>
+  <!-- /header alert box -->
+
+  <div class="row va-flex" id="va-header-logo-menu">
+    <div role="banner" class="va-header-logo-wrapper">
+      <a href="/" class="va-header-logo">
+      {% include "assets/img/svglogo.svg" %}
+      </a>
+    </div>
+    {% if body_class != 'page-playbook' %}
+      <div id="vetnav-controls"> 
+        <button aria-controls="vetnav" aria-expanded="false" hidden type="button" class="vetnav-controller-close">
+          <span class="va-flex">
+            {% include "assets/img/icons/close.svg" %}
+            Close
+          </span>
+        </button>
+        <button aria-controls="vetnav" type="button" aria-expanded="false" class="vetnav-controller-open">
+          <span class="va-flex">
+            {% include "assets/img/arrow-down.svg" %}
+            Menu
+          </span>
+        </button>
+      </div>
+    {% endif %}
+  
+    <div id="login-root" class="vet-toolbar"></div>
+ 
+
+    {% if body_class != 'page-playbook' %}
+    {% include "content/includes/veteran-navigation.html" %}
+    {% endif %}  
+  </div>
+
+  
+</header>
+
+<script src="/js/usa-search.js"></script>
