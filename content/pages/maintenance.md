@@ -17,7 +17,7 @@ permalink: false
       </div>
     </div>
   </div>
-   {% include content/includes/common-and-popular.html %}
+   
 </div>
 
 <!-- Maintenance Page End -->

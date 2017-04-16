@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
-<!--[if IE 7 ]> <html lang="en" class="ie7"> <![endif]-->
-<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-
+<html lang="en"> 
+  
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta content="Vets.gov" property="og:site_name">
+<meta content="*todo* site name" property="og:site_name">
 {% if lastupdate %}
 <meta name="DC.Date" content="{{lastupdate| date: '%Y-%m-%d'}}" property="http://purl.org/dc/terms/date">
 {% endif %}
@@ -31,9 +27,9 @@
 {% endfor %}
 {% endif %}
 {% if title === 'Home' %}
-<title>Vets.gov</title>
+<title>*todo* domain?</title>
 {% else %}
-<title>{{ title }}: Vets.gov</title>
+<title>{{ title }}: *todo* domain?</title>
 {% endif %}
 
 <!-- Icons -->
@@ -56,15 +52,6 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700|Roboto+Slab" rel="stylesheet" type="text/css">
 
-<!-- Old IE -->
-
-<!--[if lt IE 9]>
-<link rel='stylesheet' href='/assets/css/ie.css'>
-<![endif]-->
-
-<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=VA" id="_fed_an_ua_tag"></script>
-
 <script>
 //<![CDATA[
 window.webpackManifest = 'CHUNK_MANIFEST_PLACEHOLDER';
@@ -84,24 +71,8 @@ window.webpackManifest = 'CHUNK_MANIFEST_PLACEHOLDER';
 <a class="show-on-focus" href="#content">Skip to Content</a>
 
 <header class="header">
-  <div class="incompatible-browser-warning">
-    <div class="row full">
-      <div class="small-12">
-        Your browser is out of date. To use this website, please <a href="https://whatbrowser.org/">update your browser</a> or use a different device.
-      </div>
-    </div>
-  </div>
 
-  <div class="crisis-line-sm">
-    <div class="va-flex">
-      <button data-show="#modal-crisisline" class="va-crisis-line va-overlay-trigger">
-        <span class="va-flex">
-          <span class="vcl"></span>
-          Get help from Veterans Crisis Line
-        </span>
-      </button>
-    </div>
-  </div>
+  Header
 
   <!-- /header alert box -->
 
@@ -111,30 +82,12 @@ window.webpackManifest = 'CHUNK_MANIFEST_PLACEHOLDER';
       Logo
       </a>
     </div>
-    {% if body_class != 'page-playbook' %}
-      <div id="vetnav-controls"> 
-        <button aria-controls="vetnav" aria-expanded="false" hidden type="button" class="vetnav-controller-close">
-          <span class="va-flex">            
-            Close
-          </span>
-        </button>
-        <button aria-controls="vetnav" type="button" aria-expanded="false" class="vetnav-controller-open">
-          <span class="va-flex">            
-            Menu
-          </span>
-        </button>
-      </div>
-    {% endif %}
-  
-    <div id="login-root" class="vet-toolbar"></div>
- 
 
     {% if body_class != 'page-playbook' %}
-    {% include "content/includes/veteran-navigation.html" %}
+    {% include "content/includes/navigation.html" %}
     {% endif %}  
   </div>
 
   
 </header>
 
-<script src="/js/usa-search.js"></script>
