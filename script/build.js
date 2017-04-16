@@ -395,6 +395,13 @@ if (options.buildtype !== 'development') {
   });
 }
 
+/*
+Redirects locally. DevOps must update Nginx config for production
+*/
+smith.use(redirect({
+  '/old.html': '/new/'
+}));
+
 /* eslint-disable no-console */
 smith.build((err) => {
   if (err) throw err;
