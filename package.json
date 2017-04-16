@@ -1,5 +1,5 @@
 {
-  "name": "vets-website",
+  "name": "site-template",
   "version": "1.0.0",
   "description": "Frontend build for vets.gov website static assets.",
   "scripts": {
@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/department-of-veterans-affairs/vets-website.git"
+    "url": "git+https://github.com/IntranetFactory/site-template.git"
   },
   "bugs": {
-    "url": "https://github.com/department-of-veterans-affairs/vets-website/issues"
+    "url": "https://github.com/IntranetFactory/site-template/issues"
   },
   "nyc": {
     "sourceMap": false,
@@ -39,7 +39,7 @@
       "src/**"
     ]
   },
-  "homepage": "https://github.com/department-of-veterans-affairs/vets-website#readme",
+  "homepage": "https://github.com/IntranetFactory/site-template#readme",
   "devDependencies": {
     "ajv": "^4.7.1",
     "axe-core": "^2.1.7",
