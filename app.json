@@ -1,5 +1,5 @@
 {
-  "name":"vets-website",
+  "name":"site",
   "scripts":{},
   "env":{
     "INSTALL_HOOKS": "no"

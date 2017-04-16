@@ -14,12 +14,9 @@ majorlinks:
     description: Post jobs and learn about hiring qualified Veterans.
 secondarylinkstitle: "Explore other ways to start a career"
 secondarylinks:
-  - url: /employment/job-seekers/start
+  - url: /
     title: Start or Grow Your Business
-    description: ""
-  - url: /employment/job-seekers/family-members
-    title: Explore Resources for Military and Veteran Family Members
-    description: ""
+    description: ""  
 relatedlinkstitle: "Learn new skills using online resources"
 relatedlinks:
   - url: https://veterans.linkedin.com/
