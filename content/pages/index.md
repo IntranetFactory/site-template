@@ -17,7 +17,7 @@ majorlinks:
   <div class="row va-flex">   
 
   <a href="/facilities/" class="outline-link-block">
-    Find nearby VA locations
+    Find nearby locations
   </a>
 
 </div>
