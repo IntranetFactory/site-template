@@ -13,7 +13,7 @@ require('babel-polyfill');
 const timestamp = new Date().getTime();
 
 const entryFiles = {    
-  'no-react': './src/js/no-react-entry.js'
+  'default': './src/js/default-entry.js'
 };
 
 const configGenerator = (options) => {
