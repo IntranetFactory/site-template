@@ -1,15 +1,19 @@
 @charset "UTF-8";
 
-// ----- VENDORS ---- //
+/* initialize bootstrap4 variables */
+@import "../../node_modules/bootstrap/scss/_variables.scss";
 
-@import "~uswds/src/stylesheets/lib/bourbon";
-@import "~uswds/src/stylesheets/lib/neat";
+/* load custom variables */
+@import "variables";
 
-@import "~uswds/src/stylesheets/lib/normalize";
+/* load bootstrap4 */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-@import "~foundation-sites/scss/foundation/components/grid";
-@import "~foundation-sites/scss/foundation/components/block-grid";
-@import "~foundation-sites/scss/foundation/components/visibility";
+
+/* load site specific css */
+@import "site"
+
+
 
 // Font Awesome WOFF/WOFF2 fonts only
 @import "~font-awesome/scss/variables";
@@ -24,51 +28,3 @@
 }
 
 
-// ---- U.S. WEB DESIGN STANDARDS SETTINGS --- //
-
-@import "~uswds/src/stylesheets/core/defaults";
-@import "~uswds/src/stylesheets/core/base";
-@import "~uswds/src/stylesheets/core/utilities";
-@import "~uswds/src/stylesheets/core/variables";
-
-// ---- U.S. WEB DESIGN STANDARDS ELEMENTS/COMPONENTS --- //
-@import "~uswds/src/stylesheets/elements/buttons";
-@import "~uswds/src/stylesheets/elements/inputs";
-@import "~uswds/src/stylesheets/elements/labels";
-@import "~uswds/src/stylesheets/elements/table";
-
-@import "~uswds/src/stylesheets/components/accordions";
-@import "~uswds/src/stylesheets/components/alerts";
-@import "~uswds/src/stylesheets/components/forms";
-@import "~uswds/src/stylesheets/components/sidenav";
-
-// ----- VA BASE (VARIABLES/HELPERS) ---- //
-
-@import "base/b-variables";
-@import "base/b-mixins";
-@import "base/b-functions";
-@import "base/b-utils";
-
-// ----- VA GENERAL (MAIN FILE/OTHER) ---- //
-
-@import "base/va";
-@import "normalize";
-
-// ----- VA MODULES (BUTTONS/CARDS/TABLES) ---- //
-@import "modules/m-card";
-@import "modules/m-alert";
-@import "modules/m-crisis-line";
-@import "modules/m-growable";
-@import "modules/m-piano-key";
-@import "modules/m-table";
-@import "modules/m-button";
-@import "modules/m-form-elements";
-@import "modules/m-search";
-@import "modules/m-loading-indicator";
-@import "modules/m-vet-nav";
-@import "modules/m-print";
-@import "modules/m-dropdown";
-
-// ----- VA SHAME ---- //
-
-@import "shame";
